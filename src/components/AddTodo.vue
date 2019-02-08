@@ -26,8 +26,9 @@ export default {
             title: this.title,
             completed: false
         }
-        //send up to the parent
+        //send up to the parent. the new todo is then available to the home component where addtodo is embedded
         this.$emit('add-todo', newTodo);
+        //clears the title field on submit of the new todo
         this.title = '';
         }
         

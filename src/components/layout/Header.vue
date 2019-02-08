@@ -2,6 +2,10 @@
     <header class="header">
         <h1>TodoList</h1>
         <div id="nav">
+            <!--router-links are vue router routes defined in the router.js file
+            the path / defaults to load the Home component
+            -->
+
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
@@ -15,6 +19,7 @@ export default {
 </script>
 
 <style scoped>
+    /*scoped style sheet only applies to the template defined in this file*/
     .header{
         background: #333;
         color: #fff;
