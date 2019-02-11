@@ -1,13 +1,17 @@
 <template>
 <!--if the todo item is complete a class style to underline is attached-->
-<div class="todo-item" v-bind:class="{'is-complete':todo.completed}
+<!--
+    <div class="todo-item" v-bind:class="{'is-complete':todo.completed}
 ">
+-->
+<div class="todo-item">
 
 <p>
 <!--if the check box is changed the today complete boolean is flipped thought call to the markCompleted method-->
-<input type="checkbox" v-on:change="markComplete">
+<input type="checkbox" v-on:change="markComplete">{{' '}}
 <!--outputs the property of title in todo-->
-{{todo.title}}
+<span class="todo-item" v-bind:class="{'is-complete':todo.completed}">{{todo.title}}</span>
+
 <!--emits the todo id on button click-->
 <button @click="$emit('del-todo', todo.id)" class="del">X</button></p>
 </div>

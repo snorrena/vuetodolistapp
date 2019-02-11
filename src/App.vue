@@ -1,11 +1,12 @@
 <template>
-  <div id="app">
+  <div>
     <!--the header component is injected into the template here-->
     <Header />
     
-    <!--the vue router is injected into the template here-->
-    <!--this components defines paths/routes used by the app and are defined in the router.js file-->
+    <!--the router view will inject the home page or about page depending on which
+    router link is clicked in the header component-->
     <router-view/>
+
   </div>
 </template>
 
